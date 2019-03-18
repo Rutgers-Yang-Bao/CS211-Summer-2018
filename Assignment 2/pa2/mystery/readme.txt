@@ -1,0 +1,5 @@
+How I figure out what the mystery program does :
+	I have to say I do this in a very slow way. I first read the assembly code over and transfer the code into C code which I fimilar with and replace the register such as %rdi, %rsi with the variable such as a, b. Then I read the pseudocode and find that mystery is calculating the Fibonacci sequence in an array and print out. To be honest, I stuck at the num(,%rax,8) for a every long time because I didn't realize that it is an array and the name of the function Compute_fib also relates we to Fibonacci sequence. 
+
+Why the optimized code runs faster :
+	I compared the optimized version with the unoptimized version and I found that the optimized has much less lines of code than the unoptimized version. I think the reason why optimized code runs faster is because it ignores many step that is not necessary which prepares the memory and use better instruction, such as in the add function, optimized code uses leaq instruction to replace more than 10 lines of movq to get the same effect.
